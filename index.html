@@ -89,6 +89,19 @@
 <footer>
     <p>© 2026 Walter Wodya | Built on Microsoft Azure</p>
 </footer>
+<script>
+async function getVisitorCount() {
+    try {
+        const response = await fetch("PASTE_YOUR_FUNCTION_URL_HERE");
+        const data = await response.json();
+        document.getElementById("visitor-count").innerText = data.count;
+    } catch (error) {
+        console.error("Error fetching visitor count:", error);
+    }
+}
 
+getVisitorCount();
+</script>
 </body>
 </html>
+
