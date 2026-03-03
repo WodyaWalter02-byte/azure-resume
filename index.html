@@ -92,7 +92,7 @@
 <script>
 async function getVisitorCount() {
     try {
-        const response = await fetch("https://azure-resume-api-walter-cpf0ashxazc0d2an.southafricanorth-01.azurewebsites.net/api/visitor-counter");
+        const response = await fetch("https://walter-resume-api-walter-cpf0ashxazc0d2an.southafricanorth-01.azurewebsites.net/api/visitor-counter");
         const data = await response.json();
         document.getElementById("visitor-count").innerText = data.count;
     } catch (error) {
@@ -101,10 +101,12 @@ async function getVisitorCount() {
     }
 }
 
+// Call the function once page loads
 getVisitorCount();
 </script>
 </body>
 </html>
+
 
 
 
