@@ -85,27 +85,12 @@
     <p>LinkedIn: <a href="https://www.linkedin.com/in/walter-wodya/" target="_blank">linkedin.com/in/walter-wodya</a></p>
     <p>GitHub: <a href="https://github.com/WodyaWalter02-byte" target="_blank">github.com/WodyaWalter02-byte</a></p>
 </section>
-<p><strong>Visitors:</strong> <span id="visitor-count">Loading...</span></p>
 <footer>
     <p>© 2026 Walter Wodya | Built on Microsoft Azure</p>
 </footer>
-<script>
-async function getVisitorCount() {
-    try {
-        const response = await fetch("https://walter-resume-api-cbfrcdg2hufpevf0.southafricanorth-01.azurewebsites.net/api/visitor-counter?code=XObfN5BXVmAfmqal3IVr3myHQloZ4aySot4bO3Y_DEhIAzFuuoFaEg==");
-        const data = await response.json();
-        document.getElementById("visitor-count").innerText = data.count;
-    } catch (error) {
-        console.error("Error fetching visitor count:", error);
-        document.getElementById("visitor-count").innerText = "Error";
-    }
-}
-
-// Call the function once page loads
-getVisitorCount();
-</script>
 </body>
 </html>
+
 
 
 
