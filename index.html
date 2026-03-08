@@ -94,13 +94,11 @@ async function updateCounter() {
     const url = "https://resumecounterfunc-h7b8cxddf4ezg7gj.southafricanorth-01.azurewebsites.net/api/submitVisitor?code=i6RAAHLZ-AOFiirIlfFm8KGD9pkl_y4l_8EILiAWvI7CAzFuJ1JLwQ==";
 
     try {
-        let response = await fetch(url);
-        let data = await response.json();
-
+        const response = await fetch(url);
+        const data = await response.json();
         document.getElementById("counter").textContent = data.count;
-
     } catch (error) {
-        console.log(error);
+        console.error(error);
         document.getElementById("counter").textContent = "API Error";
     }
 }
@@ -109,6 +107,7 @@ updateCounter();
 </script>
 </body>
 </html>
+
 
 
 
